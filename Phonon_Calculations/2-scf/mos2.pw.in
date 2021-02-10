@@ -1,0 +1,42 @@
+&control
+   calculation   = 'scf',
+   title         = 'MoS2 scf',
+   prefix        = 'mos2',
+   restart_mode  = 'from_scratch',
+   outdir        = 'out',
+   pseudo_dir    = '/home/rehnd/.local/espresso-5.2.0/pseudo',
+   tprnfor        = .true.
+/
+&system
+   ibrav  = 0,
+   nat          =  6,
+   ntyp         =  2, 
+   ecutwfc      =  50.0,
+   ecutrho      =  250.0,
+   occupations  =  'smearing',
+   smearing     =  'fd',
+   degauss      =  0.005,
+   nspin        =  1,
+   lda_plus_u   =  .false., 
+/
+&ELECTRONS
+   conv_thr        =  1.0d-8,
+   diagonalization =  'david',
+/
+ATOMIC_SPECIES
+   S  32.065   S.pbe-mt_fhi.UPF
+  Mo  95.94   Mo.pbe-mt_fhi.UPF
+CELL_PARAMETERS (angstrom)
+   3.1832   0.0000   0.0000
+  -1.5916   2.7567   0.0000
+   0.0000   0.0000  13.719
+ATOMIC_POSITIONS (crystal)
+Mo       0.666667000   0.333333000   0.250000000
+Mo       0.333333000   0.666667000   0.750000000
+S        0.333333000   0.666667000   0.135165155
+S        0.666667000   0.333333000   0.635165155
+S        0.333333000   0.666667000   0.364834845
+S        0.666667000   0.333333000   0.864834845
+K_POINTS (automatic)
+   16 16 8 1 1 1
+
