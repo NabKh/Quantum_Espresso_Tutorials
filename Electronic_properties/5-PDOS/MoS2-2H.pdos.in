@@ -1,0 +1,8 @@
+&PROJWFC
+    prefix  = 'MoS2-2H'
+    outdir  = '../out'
+    filpdos = 'MoS2-2H.pdos'   ! prefix of the output files
+    Emin    = -10.0            ! energy window (eV)
+    Emax    = 15.0
+    DeltaE  = 0.01             ! energy step (eV)
+/

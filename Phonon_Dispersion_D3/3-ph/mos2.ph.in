@@ -1,0 +1,10 @@
+MoS2 phonon dispersion
+&inputph
+    prefix   = 'mos2'
+    outdir   = './out'          ! copied from ../2-scf by run.sbatch
+    tr2_ph   = 1.0d-16          ! tight threshold for the linear response
+    epsil    = .true.           ! dielectric tensor and Born charges at Gamma
+    ldisp    = .true.           ! phonons on a uniform grid of q-points
+    nq1 = 6, nq2 = 6, nq3 = 2   ! q-grid (in-plane x in-plane x out-of-plane)
+    fildyn   = 'mos2.dyn'       ! writes mos2.dyn0, mos2.dyn1, ... one file per q-point
+/

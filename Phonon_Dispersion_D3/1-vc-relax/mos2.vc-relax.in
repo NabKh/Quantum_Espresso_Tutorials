@@ -1,0 +1,47 @@
+&control
+    calculation   = 'vc-relax'
+    prefix        = 'mos2'
+    outdir        = './out'
+    pseudo_dir    = '../../pseudo'
+    etot_conv_thr = 1.0d-6
+    forc_conv_thr = 1.0d-4
+    tstress       = .true.
+    tprnfor       = .true.
+/
+&system
+    ibrav       = 4
+    celldm(1)   = 5.9716        ! a = 3.16 Angstrom (starting guess)
+    celldm(3)   = 3.8915        ! c/a, c = 12.30 Angstrom (starting guess)
+    nat         = 6
+    ntyp        = 2
+    ecutwfc     = 60            ! test this yourself, see README
+    occupations = 'fixed'       ! 2H-MoS2 is a semiconductor
+    vdw_corr    = 'dft-d3'      ! Grimme D3: binds the MoS2 layers
+    dftd3_threebody = .false.   ! d3hess.x and ph.x need the two-body D3 only
+/
+&electrons
+    conv_thr    = 1.0d-12
+/
+&ions
+    ion_dynamics = 'bfgs'
+/
+&cell
+    cell_dynamics  = 'bfgs'
+    press          = 0.0
+    press_conv_thr = 0.1
+    cell_dofree    = 'ibrav'    ! keep the hexagonal symmetry
+/
+ATOMIC_SPECIES
+S  32.06  S.pbe-mt_fhi.UPF
+Mo 95.95  Mo.pbe-mt_fhi.UPF
+
+ATOMIC_POSITIONS {crystal}
+S  0.3333333333 0.6666666667 0.121000
+S  0.6666666667 0.3333333333 0.621000
+S  0.3333333333 0.6666666667 0.379000
+S  0.6666666667 0.3333333333 0.879000
+Mo 0.6666666667 0.3333333333 0.250000
+Mo 0.3333333333 0.6666666667 0.750000
+
+K_POINTS {automatic}
+12 12 3 0 0 0

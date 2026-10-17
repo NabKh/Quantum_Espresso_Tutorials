@@ -1,0 +1,5 @@
+&input
+    fildyn = 'mos2.dyn'         ! dynamical matrices from 3-ph
+    zasr   = 'crystal'          ! acoustic sum rule on the Born charges
+    flfrc  = 'mos2.fc'          ! real-space interatomic force constants
+/

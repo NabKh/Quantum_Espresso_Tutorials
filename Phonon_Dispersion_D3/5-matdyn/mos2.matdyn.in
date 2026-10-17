@@ -1,0 +1,12 @@
+&input
+    asr   = 'crystal'           ! three zero-frequency acoustic modes at Gamma
+    flfrc = 'mos2.fc'           ! force constants from 4-q2r
+    flfrq = 'mos2.freq'         ! frequencies along the path (cm-1); also writes mos2.freq.gp
+    q_in_band_form = .true.     ! the q-points below are corners of the path
+/
+5
+0.000000 0.000000 0.000000 40   ! Gamma
+0.500000 0.288675 0.000000 20   ! M
+0.333333 0.577350 0.000000 40   ! K
+0.000000 0.000000 0.000000 10   ! Gamma
+0.000000 0.000000 0.128074 1    ! A = (0, 0, a/2c), with c/a from 2-scf

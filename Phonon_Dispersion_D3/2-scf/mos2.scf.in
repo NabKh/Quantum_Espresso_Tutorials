@@ -1,0 +1,36 @@
+&control
+    calculation = 'scf'
+    prefix      = 'mos2'
+    outdir      = './out'
+    pseudo_dir  = '../../pseudo'
+    tprnfor     = .true.
+    tstress     = .true.
+/
+&system
+    ibrav       = 4
+    celldm(1)   = 5.982378      ! a = 3.166 Angstrom: copy from your 1-vc-relax output
+    celldm(3)   = 3.903990      ! c/a, c = 12.359 Angstrom
+    nat         = 6
+    ntyp        = 2
+    ecutwfc     = 60
+    occupations = 'fixed'
+    vdw_corr    = 'dft-d3'
+    dftd3_threebody = .false.   ! required by d3hess.x and ph.x
+/
+&electrons
+    conv_thr    = 1.0d-12       ! tight SCF for phonons
+/
+ATOMIC_SPECIES
+S  32.06  S.pbe-mt_fhi.UPF
+Mo 95.95  Mo.pbe-mt_fhi.UPF
+
+ATOMIC_POSITIONS {crystal}
+S  0.3333333333 0.6666666667 0.1224941157
+S  0.6666666667 0.3333333333 0.6224941157
+S  0.3333333333 0.6666666667 0.3775058843
+S  0.6666666667 0.3333333333 0.8775058843
+Mo 0.6666666667 0.3333333333 0.2500000000
+Mo 0.3333333333 0.6666666667 0.7500000000
+
+K_POINTS {automatic}
+12 12 3 0 0 0

@@ -1,0 +1,4 @@
+&input
+    prefix = 'mos2'
+    outdir = './out'
+/
