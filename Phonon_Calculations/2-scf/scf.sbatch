@@ -11,5 +11,5 @@
 
 PREFIX=mos2
 
-mpirun -np 64 /home/rehnd/.local/qe-6.2.1/bin/pw.x < $PREFIX.pw.in > $PREFIX.pw.out
+mpirun -np 64 pw.x < $PREFIX.pw.in > $PREFIX.pw.out
 

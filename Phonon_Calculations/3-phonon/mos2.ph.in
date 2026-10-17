@@ -1,7 +1,7 @@
-MoTe2 Phonon calculation
+MoS2 phonon calculation
 &inputph
   prefix   = 'mos2',
-  outdir   = './out',     ! NOTE: must copy (or already have) out/ from 1-scf/ directory
+  outdir   = './out',     ! NOTE: must copy (or already have) out/ from the 2-scf/ directory
 
   tr2_ph   = 1.0d-10,     ! threshold for self-consistency
   amass(1) = 32.00,      ! atomic mass of each atom type

@@ -13,5 +13,5 @@ PREFIX=mos2
 
 rm -rf *out
 cp -r ../2-scf/out .
-mpirun -np 128 /home/rehnd/.local/qe-6.2.1/bin/ph.x < $PREFIX.ph.in > $PREFIX.ph.out
+mpirun -np 128 ph.x < $PREFIX.ph.in > $PREFIX.ph.out
 

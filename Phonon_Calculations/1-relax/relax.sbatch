@@ -12,4 +12,4 @@
 PREFIX=mos2
 
 #rm -rf *out
-mpirun -np 128 /home/rehnd/.local/qe-6.2.1/bin/pw.x < $PREFIX.pw.in > $PREFIX.pw.out
+mpirun -np 128 pw.x < $PREFIX.pw.in > $PREFIX.pw.out

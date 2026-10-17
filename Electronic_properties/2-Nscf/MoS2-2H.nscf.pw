@@ -3,7 +3,7 @@
     calculation  = 'nscf',
     restart_mode = 'from_scratch',
     prefix       = 'MoS2-2H',
-    pseudo_dir   = '/home/rehnd/.local/espresso-5.2.0/pseudo',
+    pseudo_dir   = '../../pseudo',
     outdir       = '../out',
 
     wf_collect    = .true.

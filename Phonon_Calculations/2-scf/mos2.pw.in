@@ -4,7 +4,7 @@
    prefix        = 'mos2',
    restart_mode  = 'from_scratch',
    outdir        = 'out',
-   pseudo_dir    = '/home/rehnd/.local/espresso-5.2.0/pseudo',
+   pseudo_dir    = '../../pseudo',
    tprnfor        = .true.
 /
 &system

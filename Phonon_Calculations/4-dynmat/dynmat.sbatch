@@ -14,4 +14,4 @@ PREFIX=mos2
 cp -r ../3-phonon/out .
 cp -r ../3-phonon/$PREFIX.dyn .
 
-/home/rehnd/.local/qe-6.2.1/bin/dynmat.x < $PREFIX.dynmat.in > $PREFIX.dynmat.out
+dynmat.x < $PREFIX.dynmat.in > $PREFIX.dynmat.out

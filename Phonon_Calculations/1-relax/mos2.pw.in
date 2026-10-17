@@ -2,7 +2,7 @@
    calculation   = 'vc-relax',
    restart_mode  = 'from_scratch',
    outdir        = 'out',
-   pseudo_dir    = '/home/rehnd/.local/espresso-5.2.0/pseudo' ,
+   pseudo_dir    = '../../pseudo' ,
    disk_io       = 'default',
    verbosity     = 'default',
    tstress       = .true.,

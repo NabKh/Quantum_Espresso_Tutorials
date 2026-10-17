@@ -9,7 +9,7 @@
 #SBATCH --mem=4000
 #SBATCH --ntasks-per-node=16
 
-QE=/home/rehnd/.local/espresso-5.2.0/bin
+QE=$(dirname "$(command -v pw.x)")   # folder with the QE executables: load your QE module first
 
 SYST=MoS2-2H
 TYPE=bands
