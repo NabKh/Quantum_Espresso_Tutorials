@@ -2,7 +2,7 @@
 
 # Note: this calculation can be run in serial and does not require SLURM (sbatch)
 
-QE=/home/rehnd/.local/espresso-5.2.0/bin
+QE=$(dirname "$(command -v pw.x)")   # folder with the QE executables: load your QE module first
 
 SYST=MoS2-2H
 TYPE=bands
