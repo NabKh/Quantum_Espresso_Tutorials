@@ -4,6 +4,8 @@ Step-by-step Quantum ESPRESSO inputs for bulk 2H-MoS<sub>2</sub> (6 atoms, hexag
 
 The newer parts (`Phonon_Dispersion_D3/`, `Hybrid_HSE06/`, `Electronic_properties/5-PDOS/`) are hands-on exercises: they give the inputs and explain each step, but not the outputs. Run them yourself and check your results against the notes in each README.
 
+A VASP version of the PBE vs HSE06 band-structure comparison for the same crystal is in [VASP_Tutorial](https://github.com/NabKh/VASP_Tutorial).
+
 ## Contents
 
 ```
